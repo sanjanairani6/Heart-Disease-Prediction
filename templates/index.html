@@ -173,7 +173,7 @@
       }
     }
 
-    .low-risk    { background-color: #d4edda; color: #155724; }
+    .no-risk    { background-color: #d4edda; color: #155724; }
     .moderate-risk { background-color: #fff3cd; color: #856404; }
     .high-risk     { background-color: #f8d7da; color: #721c24; }
 
@@ -228,7 +228,7 @@
 
         {% if prediction_text %}
         <div class="result
-          {% if 'Low' in prediction_text %}low-risk
+          {% if 'No' in prediction_text %}no-risk
           {% elif 'Moderate' in prediction_text %}moderate-risk
           {% elif 'High' in prediction_text %}high-risk
           {% endif %}">
@@ -264,16 +264,16 @@
     const inputs = document.querySelectorAll('input');
 
     if (resultBox) {
-      // Hide the result after 10 seconds
+      // Hide the result after 50 seconds
       setTimeout(() => {
         resultBox.style.display = 'none';
-      }, 10000);
+      }, 50000);
     }
 
-    // Clear inputs after 12 seconds
+    // Clear inputs after 42 seconds
     setTimeout(() => {
       inputs.forEach(input => input.value = '');
-    }, 12000);
+    }, 42000);
   });
 </script>
 

@@ -22,7 +22,7 @@ def predict():
 
         # You can adjust logic here
         if prediction == 0:
-            result = "Low risk of heart disease"
+            result = "No risk of heart disease"
         elif prediction == 1:
             result = "High risk of heart disease"
         else:
